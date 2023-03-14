@@ -1,0 +1,33 @@
+@media screen and (max-width:740px) {
+    #content{
+        width: 100vw;
+        height: 100vh;
+        flex-direction: column;
+        border-radius: 0px;
+    }
+    #stat-display{
+        width: 100%;
+        border-radius: 0 0 4vh 4vh;
+    }
+    #stat-info{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:740px){
+    #btn-continue:hover{
+        background-image: linear-gradient( 30deg, var(--light-royal-blue), var(--light-slate-blue));
+    }
+    #btn-continue:active{
+        background-image: linear-gradient( 30deg, var(--light-royal-blue), var(--light-slate-blue));
+    }
+    #reaction:hover{ background-color: hsla( var(--light-red), .2 )}
+    #memory:hover{ background-color: hsla( var(--orangey-yellow), .2 )}
+    #verbal:hover{ background-color: hsla( var(--green-teal), .2 )}
+    #visual:hover{ background-color: hsla( var(--cobalt-blue), .2 )}
+    #content:hover{
+        height: calc(55vh + 3vh);
+        width: calc(80vh + 3vh);
+        box-shadow: 0 10px 20px #0003;
+    }
+}
