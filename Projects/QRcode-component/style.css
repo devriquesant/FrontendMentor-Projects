@@ -1,0 +1,65 @@
+:root{
+    --snow-white: hsl(0, 0%, 100%);
+    --concrete-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --darken-blue: hsl(218, 44%, 22%);
+}
+
+/*Importação da fonte requisitada <Outifit>*/
+@import url('https://fonts.googleapis.com/css2?family=Outifit:wght@400;700&display=swap');
+
+*{
+    font-family: 'Outfit', sans-serif;
+}
+
+body{
+    margin: auto 0;
+}
+
+#main{
+    width: 100vw;
+    height: 100vh;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--concrete-gray);
+}
+
+#content{
+    border-radius: 40px;
+    box-shadow: 0 10px 25px #0002;
+    width: 40vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background-color: var(--snow-white);
+}
+
+#qr-container{
+    width: 90%;
+    margin: 5%;
+}
+
+#qr-code{
+    width: 100%;
+    border-radius: 40px;
+}
+
+#text-content{
+    text-align: center;
+    max-width: 85%;
+}
+#text-content h1{
+    font-size: 2.7vh;
+    font-weight: bold;
+    color: var(--darken-blue);
+}
+#text-content p{
+    font-size: 2vh;
+    color: var(--grayish-blue);
+    margin-bottom: 5vh;
+}
