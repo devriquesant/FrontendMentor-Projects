@@ -31,9 +31,8 @@ Here's the final project result:
 ![](./screenshot.png)
 
 ### Links
-
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/devriquesant/FrontendMentor-Projects/tree/main/Projects/Results-summary-component)
+- Live Site URL: [Add live site URL here](https://devriquesant.github.io/FrontendMentor-Projects/Projects/Results-summary-component/)
 
 ## My process
 
