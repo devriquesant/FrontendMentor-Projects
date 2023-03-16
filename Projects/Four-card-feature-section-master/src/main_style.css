@@ -1,0 +1,29 @@
+:root{
+    --cred:   hsl(0, 78%, 62%);
+    --ccyan:  hsl(180, 62%, 55%);
+    --corange:hsl(34, 97%, 64%);
+    --cblue:  hsl(212, 86%, 64%);
+
+    --darklueBlue: hsl(234, 12%, 34%);
+    --grayish: hsl(229, 6%, 66%);
+    --lighray: hsl(0, 0%, 98%);
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Poppins bold";
+    src: url("./fonts/Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Poppins light";
+    src: url("./fonts/Poppins/Poppins-ExtraLight.ttf");
+}
+
+body{
+    margin: 0;
+}
