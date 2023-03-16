@@ -1,0 +1,31 @@
+:root{
+    --newbie-color: 106, 190, 205;
+    --junior-color: 170, 215, 66;
+    --intermediate-color: 241, 182, 4;
+    --advanced-color: 244, 137, 37;
+    --guru-color: 237, 44, 73;
+
+    --project-size: 20vw; 
+
+    --bx-newbie:       rgba( var(--newbie-color), 0.4) 1vw 1vw, rgba( var(--newbie-color), 0.3) 2vw 2vw, rgba( var(--newbie-color), 0.2) 3vw 3vw, rgba( var(--newbie-color), 0.1) 4vw 4vw, rgba( var(--newbie-color), 0.05) 5vw 5vw;
+    --bx-junior:       rgba( var(--junior-color), 0.4) 1vw 1vw, rgba( var(--junior-color), 0.3) 2vw 2vw, rgba( var(--junior-color), 0.2) 3vw 3vw, rgba( var(--junior-color), 0.1) 4vw 4vw, rgba( var(--junior-color), 0.05) 5vw 5vw;
+    --bx-intermediate: rgba( var(--intermediate-color), 0.4) 1vw 1vw, rgba( var(--intermediate-color), 0.3) 2vw 2vw, rgba( var(--intermediate-color), 0.2) 3vw 3vw, rgba( var(--intermediate-color), 0.1) 4vw 4vw, rgba( var(--intermediate-color), 0.05) 5vw 5vw;
+    --bx-advanced:     rgba( var(--advanced-color), 0.4) 1vw 1vw, rgba( var(--advanced-color), 0.3) 2vw 2vw, rgba( var(--advanced-color), 0.2) 3vw 3vw, rgba( var(--advanced-color), 0.1) 4vw 4vw, rgba( var(--advanced-color), 0.05) 5vw 5vw;
+    --bx-guru:         rgba( var(--guru-color), 0.4) 1vw 1vw, rgba( var(--guru-color), 0.3) 2vw 2vw, rgba( var(--guru-color), 0.2) 3vw 3vw, rgba( var(--guru-color), 0.1) 4vw 4vw, rgba( var(--guru-color), 0.05) 5vw 5vw;
+    
+}
+
+@font-face {
+    font-family: "Quicksand";
+    src: url("./font/Quicksand/Quicksand-VariableFont_wght.ttf");
+}
+
+*{
+    font-family: "Quicksand", sans-serif;
+}
+
+body{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}

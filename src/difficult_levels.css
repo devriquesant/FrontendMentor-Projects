@@ -1,0 +1,68 @@
+.bk-newbie     { background-color: rgb( var(--newbie-color) );      color: #000; }
+.bka-newbie{ background-color: rgba( var(--newbie-color), .5 ); color: #000; }
+.bx-shw-newbie{
+    box-shadow: 
+        rgba( var(--newbie-color), 0.4) 1vw 1vw, 
+        rgba( var(--newbie-color), 0.3) 2vw 2vw, 
+        rgba( var(--newbie-color), 0.2) 3vw 3vw, 
+        rgba( var(--newbie-color), 0.1) 4vw 4vw, 
+        rgba( var(--newbie-color), 0.05) 5vw 5vw;
+}
+
+.bk-junior     { background-color: rgb( var(--junior-color) );      color: #000; }
+.bka-junior{ background-color: rgba( var(--junior-color), .5 ); color: #000; }
+.bx-shw-junior{
+    box-shadow: 
+        rgba( var(--junior-color), 0.4) 1vw 1vw, 
+        rgba( var(--junior-color), 0.3) 2vw 2vw, 
+        rgba( var(--junior-color), 0.2) 3vw 3vw, 
+        rgba( var(--junior-color), 0.1) 4vw 4vw, 
+        rgba( var(--junior-color), 0.05) 5vw 5vw;
+}
+
+.bk-intermediate     { background-color: rgb( var(--intermediate-color) );      color: #000; }
+.bka-intermediate{ background-color: rgba( var(--intermediate-color), .5 ); color: #000; }
+.bx-shw-intermediate{
+    box-shadow: 
+        rgba( var(--intermediate-color), 0.4) 1vw 1vw, 
+        rgba( var(--intermediate-color), 0.3) 2vw 2vw, 
+        rgba( var(--intermediate-color), 0.2) 3vw 3vw, 
+        rgba( var(--intermediate-color), 0.1) 4vw 4vw, 
+        rgba( var(--intermediate-color), 0.05) 5vw 5vw;
+}
+
+.bk-advanced     { background-color: rgb( var(--advanced-color) );      color: #000; }
+.bka-advanced{ background-color: rgba( var(--advanced-color), .5 ); color: #000; }
+.bx-shw-advanced{
+    box-shadow: 
+        rgba( var(--advanced-color), 0.4) 1vw 1vw, 
+        rgba( var(--advanced-color), 0.3) 2vw 2vw, 
+        rgba( var(--advanced-color), 0.2) 3vw 3vw, 
+        rgba( var(--advanced-color), 0.1) 4vw 4vw, 
+        rgba( var(--advanced-color), 0.05) 5vw 5vw;
+}
+
+.bk-guru     { background-color: rgb( var(--guru-color) );      color: #000; }
+.bka-guru{ background-color: rgba( var(--guru-color), .5 ); color: #000; }
+.bx-shw-guru{
+    box-shadow: 
+        rgba( var(--guru-color), 0.4) 1vw 1vw, 
+        rgba( var(--guru-color), 0.3) 2vw 2vw, 
+        rgba( var(--guru-color), 0.2) 3vw 3vw, 
+        rgba( var(--guru-color), 0.1) 4vw 4vw, 
+        rgba( var(--guru-color), 0.05) 5vw 5vw;
+}
+
+/* For each Difficult level - hover project - animate boxshadow*/
+.project-box.project-touch.bk-newbie, .project-box.bk-newbie:hover{ box-shadow: var(--bx-newbie); }
+.project-box.project-touch.bk-junior, .project-box.bk-junior:hover{ box-shadow: var(--bx-junior); }
+.project-box.project-touch.bk-intermediate, .project-box.bk-intermediate:hover{ box-shadow: var(--bx-intermediate); }
+.project-box.project-touch.bk-advanced, .project-box.bk-advanced:hover{ box-shadow: var(--bx-advanced); }
+.project-box.project-touch.bk-guru, .project-box.bk-guru:hover{ box-shadow: var(--bx-guru); }
+
+/* For each difficult level - touch project - animate boxshadow*/
+.project-box.project-touch.bk-newbie{ box-shadow: var(--bx-newbie); }
+.project-box.project-touch.bk-junior{ box-shadow: var(--bx-junior); }
+.project-box.project-touch.bk-intermediate{ box-shadow: var(--bx-intermediate); }
+.project-box.project-touch.bk-advanced{ box-shadow: var(--bx-advanced); }
+.project-box.project-touch.bk-guru{ box-shadow: var(--bx-guru); }
