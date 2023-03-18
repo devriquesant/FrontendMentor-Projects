@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./src/style.css">
+  
+  <title>Frontend Mentor | Product preview card component</title>
+  <style>
+    footer{ background-color: var(--darkenblue); color: var(--cream); font-family: "Montserrat";}
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: var(--darkcyan); }
+  </style>
+</head>
+<body>
+  
+  <main>
+    <div id="content">
+      <div id="banner-content">
+        <div id="banner-img">
+          <img src="./src/images/image-product-desktop.jpg" alt="Product image" id="desk-banner">
+          <img src="./src/images/image-product-mobile.jpg" alt="Product image" id="mobile-banner">
+
+        </div>
+        <div id="banner-desc">
+          <div id="desc-container">
+            <div id="product">
+              <p id="p-name">PERFUME</p>
+            </div>
+            <div id="title">
+              <h1 id="title-name">Gabrielle Essence Eau De Parfum</h1>
+            </div>
+            <div id="desc">
+              <p id="description">A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL</p>
+            </div>
+            <div id="price">
+              <h1 id="current-price">$149.99</h1>
+              <p id="last-price">$169.99</p>
+            </div>
+            <div id="to-cart">
+              <button id="btn-to-cart">
+                <img src="./src/images/icon-cart.svg" alt="Icon cart" id="cart">
+                <p id="add-text">Add to Cart</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Henrique Santana</a>.
+    </div>
+  </footer>
+</body>
+</html>
