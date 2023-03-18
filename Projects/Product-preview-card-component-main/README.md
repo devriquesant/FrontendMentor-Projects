@@ -29,7 +29,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Solution](https://github.com/devriquesant/FrontendMentor-Projects/tree/main/Projects/Product-preview-card-component-main)
-- Live Site URL: [Add live site URL here](https://devriquesant.github.io/FrontendMentor-Projects/Projects/Product-preview-card-component-main/)
+- Live Site URL: [LiveSite](https://devriquesant.github.io/FrontendMentor-Projects/Projects/Product-preview-card-component-main/)
 
 ## My process
 
