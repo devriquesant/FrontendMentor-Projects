@@ -14,7 +14,7 @@ async function init(){
         const GHDirLink   = `https://github.com/devriquesant/FrontendMentor-Projects/tree/main/Projects/${repo.name}`;
         const LivePage    = `https://devriquesant.github.io/FrontendMentor-Projects/Projects/${repo.name}`;
         const BannerImage = `https://raw.githubusercontent.com/devriquesant/FrontendMentor-Projects/main/Projects/${repo.name}/screenshot.png`;
-        const ProjectName = adjustName;
+        const ProjectName = adjustName.split(" ").slice(0,3).join(" ");
 
         createProject( new ReposInfo( BannerImage, ProjectName, GHDirLink, LivePage, Difficulty ) );
 
