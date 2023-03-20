@@ -1,0 +1,185 @@
+/* Specifics */
+#component {
+    width: var(--desk-width);
+    height: calc( var(--desk-width) * var(--aspect) );
+    display: inline-flex;
+    border-radius: 1vw;
+    box-shadow: 0 1vw 20px hsla(var(--grayish-blue), .4);
+    background-color: #fff;
+}
+
+/*
+    Omissão de flex-direction
+Esse código subistiu os anteirores em que achava que necessitava utiliza um flexbox com:
+
+```css
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+```
+
+Essa tentativa de código funcionou e não proporciona extrapolação do conteúdo irmão à imagem.
+
+*/
+
+
+#left-banner{
+    width: calc( var(--desk-width) * var(--aspect) );
+    height: calc( var(--desk-width) * var(--aspect) );
+
+    overflow: hidden;
+    border-top-left-radius: inherit;
+    border-bottom-left-radius: inherit;
+}
+/* Overflow usado para recortar a imagem delimitando um tamanho à image que extrapola a div */
+
+#banner{
+    height: 100%;
+    object-fit: cover;
+}
+
+#right-banner{
+    width: calc( var(--desk-width) - var(--desk-width) * var(--aspect) );
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--banner-color);
+
+    border-top-right-radius: inherit;
+    border-bottom-right-radius: inherit;
+}
+
+#box-wrapper{
+    width: 80%;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    /*border: solid 1px;*/
+}
+
+#box-wrapper > * { margin: 0; }
+
+#title{
+    font-size: 1.5vw;
+}
+
+#description{
+    margin-top: 1vw;
+    font-size: 1vw;
+    line-height: 1.5vw;
+}
+
+#share-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1vw;
+}
+
+
+#profile-pic{
+    width: 15%;
+    margin-right: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
+
+#profile{
+    width: 100%;
+    border-radius: 50%; 
+}
+
+#avatar-info{
+    font-size: 1vw;
+    width: 100%;
+}
+
+#avatar-info > * { margin: .5vw 0 .5vw 0; }
+
+#name{ font-weight: 700; } 
+
+#share-btn{ 
+    background-color: var(--lig-grayish-blue);
+    width: 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+
+    transition: .3s background-color ease;
+    cursor: pointer;
+}
+
+#share-btn img {
+    width: 50%;
+    padding: .6vw;
+    z-index: 1;
+    transition: .3s filter ease;
+}
+
+#share-btn:hover{ background-color: var(--dkn-grayish-blue);}
+
+#share-btn:hover img{
+    filter:brightness(3);
+}
+
+
+
+#floating-box{
+    position: absolute;
+    margin-left: 0vw;
+    margin-top: -8vw;
+    width: 14vw;
+    height: 3vw;
+    border-radius: .8vw;
+
+    background-color: var(--dkn-grayish-blue);
+
+    display: none   ;
+    align-items: center;
+    justify-content: center;
+    color: var(--lig-grayish-blue);
+}
+
+.desk-box.moving-box {
+    animation: move-share-box .8s infinite alternate ease-in-out;
+}
+
+#floating-box::before{
+    content:'';
+    position:absolute;
+    display: block;
+    width: 2vw;
+    height: 2vw;
+    background: var(--dkn-grayish-blue);
+    transform: rotateZ(45deg);
+    margin-left: 0vw;
+    margin-top: 1.5vw;
+}
+#floating-box p {
+    font-size: .7vw;
+    letter-spacing: .2vw;
+}
+#floating-box img {
+    width: 1vw;
+}
+
+#floating-box a{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

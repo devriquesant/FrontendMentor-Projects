@@ -1,0 +1,60 @@
+:root{
+    --dkn-grayish-blue: hsl(217, 19%, 35%);
+    --fog-blue: hsl(214, 17%, 51%);
+    --grayish-blue: 212, 23%, 69%;
+    --lig-grayish-blue: hsl(210, 46%, 95%);
+    --banner-color: #fffcfc;
+
+    /* Props Definitions */
+    --desk-width: 55vw;
+    --aspect: .38;
+
+    --mobile-width: 90vw;
+    --m-aspect: 0.52;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("./fonts/Manrope/Manrope-VariableFont_wght.ttf");
+}
+
+*{
+    font-family: "Manrope", Verdana, Arial, sans-serif;
+}
+
+body{
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    width:100vw;
+    height: 97.7vh;
+
+    background-color: var(--lig-grayish-blue);
+}
+
+footer{
+    width: 100%;
+    height: fit-content;
+    background: var(--dkn-grayish-blue);
+    z-index: 1;
+}
+
+@keyframes move-share-box{
+    0%{
+        margin-top: -8vw;
+    }
+    100%{
+        margin-top: -9vw;
+    }
+}

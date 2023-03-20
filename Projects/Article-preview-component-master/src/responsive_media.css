@@ -1,0 +1,71 @@
+@media screen and (max-width:550px){
+    #component{
+        flex-direction: column;
+        height: fit-content;
+        width: 80vw;
+    }
+
+    #left-banner{
+        width: 100%;
+        height: 45vw;
+    }
+
+    #banner{
+        width: 100%;
+        object-position: top;
+    }
+
+    #right-banner{
+        width: auto;
+        height: auto;
+    }
+
+    #title{
+        font-size: 4.6vw;
+        margin-top: 5vw;
+    }
+
+    #description {
+        line-height: normal;
+        font-size: 3.7vw;
+        margin-top: 3vw;
+    }
+
+    #share-contact{
+        margin: 5vw 0 3vw 0;
+    }
+
+    #share-btn{
+        width: 15%;
+        padding: 1vw 0 1.5vw 0;
+    }
+
+    #avatar-info{
+        font-size: 3vw;
+        margin-left: 3vw;
+    }
+    
+    #floating-box {
+        margin-left: -57vw;
+        margin-top: 0vw;
+        width: 80vw;
+        height: 16vw;
+        justify-content: flex-start;
+        border-radius: initial;
+        border-bottom-right-radius: 0.8vw;
+        border-bottom-left-radius: 0.8vw;
+    }
+
+    #floating-box p {
+        font-size: 3vw;
+        letter-spacing: 1vw;
+        margin: 0 4vw 0 10vw;
+    }
+
+    #floating-box img {
+        width: 5vw;
+        margin: 0 1vw;  
+    }
+    
+    
+}
