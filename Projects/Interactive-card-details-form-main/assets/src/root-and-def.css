@@ -1,0 +1,42 @@
+:root{
+    --clean-white: hsl(0, 0%, 100%);
+    --lig-griolet: hsl(270, 3%, 87%);
+    --dak-griolet: hsl(279, 6%, 55%);
+    --dakiolet:    hsl(278, 68%, 11%);
+
+    --linear-border: hsl(249, 99%, 64%), hsl(278, 94%, 30%);
+    --error: hsl(0, 100%, 66%);
+}
+
+::placeholder {
+    color: var(--lig-griolet);
+    opacity: 1;
+    font-size: 1.2vw;
+}
+  
+:-ms-input-placeholder {
+    color: var(--lig-griolet);
+}
+  
+::-ms-input-placeholder {
+    color: var(--lig-griolet);
+}
+
+* {
+    font-family: 'Space Grotesk', Arial, sans-serif;
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 15vw 15vw;
+    font-size: 1vw;
+    letter-spacing: .1vw;
+    width: 30vw;
+
+    border-radius: .5vw;
+}

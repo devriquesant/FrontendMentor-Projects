@@ -1,0 +1,33 @@
+@keyframes leave {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+@keyframes display-remove{
+    0%{ display: grid; }
+    100%{ display: none; }
+}
+@keyframes bringalltogether {
+    0% { margin: 50vw 0 0 0 ; }
+    100% { margin: 2vw 0 0 0; }
+}
+@keyframes entrace-appear{
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+@keyframes entrace {
+    0% { transform: translate(-60vw, -27vw); opacity: 0 }
+    100%{ transform: translate(0, 0); opacity: 1; }
+}
+@keyframes floating{
+    0%{ transform: translate( 0, 0 ) }
+    50% { transform: translate( 0, -1vw ); }
+    100% { transform: translate( 0, 1vw ); }
+}
+@keyframes introduze{
+    0%{ opacity: 0; }
+    100%{ opacity: 1; }
+}
+@keyframes mobilebringalltogether {
+    0% { margin: 50vw 0 0 0 ; opacity: 0; }
+    100% { margin: 4vw 0 0 0; opacity: 1; }
+}

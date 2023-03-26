@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/src/root-and-def.css">
+  <link rel="stylesheet" href="./assets/src/animation.css">
+  <link rel="stylesheet" href="./assets/src/element-classes.css">
+  <link rel="stylesheet" href="./assets/src/style.css">
+  <link rel="stylesheet" href="./assets/src/media-def.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <main>
+    <div id="background">
+      <img src="./assets/images/bg-main-desktop.png" alt="background image" class="desktop-main bk-main">
+      <img src="./assets/images/bg-main-mobile.png" alt="background image" class="mobile-main bk-main" >
+    </div>
+    <div id="components">
+
+      <div id="credit-cards">
+        <img src="./assets/images/bg-card-front.png" alt="Credit card front" id="cr-front" class="cr cr-front">
+        <img src="./assets/images/card-logo.svg" alt="Credit card logo" class="logo">
+        <img src="./assets/images/bg-card-back.png" alt="Credit card back" id="cr-back" class="cr cr-back">
+
+        <div id="front-card-info">
+          <p id="card-display" class="full-table">0000 0000 0000 0000</p>
+          <div id="bottom-cell" class="full-table">
+            <div id="bottom-info">
+              <p id="name-display">JANE APPLESEED</p>
+              <p id="exp-display">00/00</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="back-card-info">
+          <p id="cvc-display">000</p>
+        </div>
+      </div>
+
+      <form id="form-insert">
+
+        <div id="confirm-label">
+          <div id="confirm-img">
+            <img src="./assets/images/icon-complete.svg" alt="Complete">
+          </div>
+          <div id="thanks">
+            <h1>THANK YOU!</h1>
+            <p>We've added your card details</p>
+          </div>
+        </div>
+
+        <div id="name-insert" class="fill-all-form flex-field input-stack">
+          <label for="name">CARDHOLDER NAME <span class="obligate">*</span></label>
+          <input maxlength="35" type="text" id="name-input" class="form-input" placeholder="e.g. Jane Appleseed">
+          <span id="name-error" class="error-msg"></span>
+        </div>
+        <div id="card-insert" class="fill-all-form flex-field input-stack">
+          <label for="cardnum">CARD NUMBER <span class="obligate">*</span></label>
+          <input maxlength="19" type="text" id="card-input" class="form-input" placeholder="e.g. 1234 5678 9123 0000">
+          <span id="card-error" class="error-msg"></span>
+        </div>
+        <div id="exp-insert" class="flex-field mid-form input-stack">
+          <label for="exp">EXP. DATA (MM/YY) <span class="obligate">*</span></label>
+          <div id="exp-inputs">
+            <input type="text" id="exp_mm-input" class="form-input" placeholder="MM">
+            <input type="text" id="exp_yy-input" class="form-input" placeholder="YY">
+            <span id="exp_mm-error" class="error-msg"></span>
+            <span id="exp_yy-error" class="error-msg"></span>
+          </div>
+        </div>
+        <div id="cvc-insert" class="flex-field mid-form input-stack">
+          <label for="cvc">CVC <span class="obligate">*</span></label>
+          <input type="text" min="000" max="999" id="cvc-input" class="form-input" placeholder="e.g. 123">
+          <span id="cvc-error" class="error-msg"></span>
+        </div>
+        <div class="fill-all-form flex-field">
+          <button type="submit" id="submit-btn">Confirm</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script type="module" src="./script.js"></script>
+</body>
+</html>

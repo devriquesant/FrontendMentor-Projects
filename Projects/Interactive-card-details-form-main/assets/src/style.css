@@ -1,0 +1,144 @@
+#background{
+    width: 35vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+}
+
+#credit-cards{
+    display: flex;
+    flex-direction: column;
+    color: var(--clean-white);
+}
+
+#front-card-info{
+    position: absolute;
+    margin-top: 9vw;
+    display: grid;
+    grid-template-columns: 15vw 15vw;
+    width: auto;
+
+    animation: floating 5s 2.5s infinite alternate ease-in-out;
+}
+
+#front-card-info > * {
+    margin: 1vw 0 -1vw 0;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+}
+
+#bottom-cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#bottom-info{
+    display: flex;
+    justify-content: space-between;
+    width: 88%;
+    font-size: 1vw;
+}
+
+#card-display{
+    font-size: 2.2vw;
+    letter-spacing: .1vw;
+    opacity: 0;
+    animation: entrace-appear 2s 2.2s forwards 1 ease;
+}
+
+#name-display{
+    opacity: 0;
+    animation: entrace-appear 2s 2.4s forwards 1 ease;
+}
+
+#exp-display{
+    opacity: 0;
+    animation: entrace-appear 2s 2.5s forwards 1 ease;
+}
+
+#components{
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
+}
+
+#back-card-info{
+    position: absolute;
+    font-size: 1.2vw;
+    margin: 24.5vw 0 0 34vw;
+    opacity: 0;
+    animation: entrace-appear 2s 2.7s forwards 1 ease, floating 5s 3.1s infinite alternate ease-in-out;
+}
+
+#exp-inputs{
+    width: 100%;
+    display: grid;
+    border-radius: inherit;
+    grid-template-columns: auto auto;
+}
+
+#exp-insert .form-input{
+    width: 80%;
+    margin-right: 1vw;
+}
+
+#submit-btn{
+    border: none;
+    border-radius: inherit;
+    height: 4vw;
+    background-color: var(--dakiolet);
+    color: var(--clean-white);
+    font-size: 1.5vw;
+    cursor: pointer;
+}
+
+#cr-front{
+    opacity: 0;
+    animation: 
+        entrace 2s .3s forwards 1 ease,
+        floating 5s 2.5s infinite alternate ease-in-out
+    ;
+}
+
+#cr-back{
+    animation: 
+        entrace 2s forwards 1 ease, 
+        floating 5s 3.1s infinite alternate ease-in-out;
+}
+
+#confirm-label {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: inherit;
+}
+
+
+#confirm-label.intro-confirm{
+    display: flex;
+    animation: introduze .5s forwards 1 ease
+}
+
+#confirm-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#confirm-img img{ width: 80%; }
+
+#thanks {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#thanks h1{ color: var(--dakiolet); }
+#thanks p { color: var(--dak-griolet); }

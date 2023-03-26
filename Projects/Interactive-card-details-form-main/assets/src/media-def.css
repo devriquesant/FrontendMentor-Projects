@@ -1,0 +1,54 @@
+@media screen and (max-width: 600px){
+
+    ::placeholder{
+        font-size: 4.2vw;
+    }
+
+    form{
+        position: absolute;
+        grid-template-columns: 45vw 45vw;
+        width: 90vw;
+        font-size: 3.5vw;
+        margin: 100vw 0 0 0;
+        border-radius: 2vw;
+    }
+
+    .desktop-main{ display: none; }
+    .mobile-main{ display: flex; }
+    .logo{ width: 15vw; margin: 4vw 0 0 4vw; }
+    .cr{ width: 75vw; }
+    .flex-field{
+        opacity: 0;
+        margin: 4vw 0 0 0;
+        animation: mobilebringalltogether 2s 1.5s forwards 1 cubic-bezier(0.11, 0.53, 0.43, 1);
+    }
+    .form-input{
+        opacity: 1;
+        font-size: 4.2vw;
+        height: 10vw;
+    }
+    .cr-back{
+        margin: -65vw 0 0 10vw;
+        z-index: -1;
+    }
+
+    #front-card-info > * { width: inherit; }
+    #back-card-info{ font-size: 4vw; margin: -10vw 0 0 68vw; }
+    #card-display{ font-size: 6vw; }
+    #credit-cards{ margin: 50vw; }
+    #bottom-info{ font-size: 3vw; }
+    #background{ width: 100vw; height: auto; }
+    #front-card-info{
+        margin-top: 20vw;
+        grid-template-columns: 25vw 25vw;
+        width: 75vw;
+    }
+    #submit-btn{
+        height: 10vw;
+        font-size: 4.5vw
+    }
+    #components{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
