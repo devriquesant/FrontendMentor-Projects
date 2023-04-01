@@ -18,8 +18,8 @@ This is a solution to the [NFT preview card component challenge on Frontend Ment
 
 ## Links
 
-- Solution / Solução: [Github](https://github.com/devriquesant/FrontendMentor-Projects/tree/main/Projects/Ntf-preview-card-component-main)
-- Site: [Site](https://devriquesant.github.io/FrontendMentor-Projects/Projects/Ntf-preview-card-component-main/)
+- Solution / Solução: [Github](https://github.com/devriquesant/FrontendMentor-Projects/tree/main/Projects/Nft-preview-card-component-main)
+- Site: [Site](https://devriquesant.github.io/FrontendMentor-Projects/Projects/Nft-preview-card-component-main/)
 
 # <img src="https://cdn-icons-png.flaticon.com/512/9906/9906449.png" width="30px"/> Português
 
