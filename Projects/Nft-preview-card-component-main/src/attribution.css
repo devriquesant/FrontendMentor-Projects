@@ -1,0 +1,35 @@
+:root{
+    --border-split: solid 1px;
+}
+
+a li{
+    color: var(--soft-blue);
+}
+
+.attribution{
+    text-align: center;
+    font-size: var(--title);
+}
+
+#nav-items {
+    list-style-position: inside;
+    padding: 0;
+    display: inline;
+}
+
+#user { border-right: var(--border-split) var(--natural); }
+#source{ border-left: var(--border-split) var(--natural); }
+
+#nav-items li {
+    background-color: var(--main-bg);
+    display: inline-block;
+    min-width: calc(15vw * var(--multiplier));
+    transform: rotateX(0deg);
+}
+
+@media screen and (max-width:500px) {
+    :root{ --border-split: solid 5px; }
+    #nav-items li {
+        border-radius: 20vw;
+    }
+}

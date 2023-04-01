@@ -1,0 +1,223 @@
+:root{
+    /* Colors */
+    /* Primary */
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --trans-cyan: hsla(178, 100%, 50%, .5);
+
+    /* Neutral */
+    --main-bg: hsl(217, 54%, 11%);
+    --card-bg: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --natural: hsl(0, 0%, 100%);
+
+    /* Parameters */
+    /* font-size */
+    --title-point: 1.5vw;   --title: 1.5vw;
+    --pargh-point: 1vw;     --pargh: 1vw;
+
+    --multiplier: 1;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url("./fonts/Outfit/Outfit-VariableFont_wght.ttf");
+}
+
+*{
+    font-family: "Outfit";
+    user-select: none;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 90%;
+}
+
+body{
+    margin: 0;
+    overflow:hidden;
+    background-color: var(--main-bg);
+    width: 100vw;
+    height: 100vh;
+}
+
+section{
+    margin: auto;
+    max-width: 90%;
+}
+
+section, #nft-preview {
+    border-radius: inherit;
+}
+
+hr{
+    width: 90%;
+    border: none;
+    height: 0.1vw;
+    margin-top: var(--title);
+    background-color: var(--line);
+}
+
+@keyframes movecard{
+    0%, 100% { margin-top: 0; }
+    50%{ margin-top: -2vw; }
+}
+
+.card{
+    width: 21vw;
+    background-color: var(--card-bg);
+    border-radius: var(--pargh);
+    padding-bottom: 1vw;
+    
+    
+    color: var(--natural);
+    box-shadow:
+        0 10px 40px #0003,
+        0 10px 40px 20px #0003;
+    animation: movecard 3s forwards infinite ease-in-out;
+}
+
+.sr-only{
+    position: absolute;
+    left: -200vw;
+    top: -200vh;
+}
+
+.inline-feature p {
+    display: inline;
+    font-weight: 600;
+    font-size: var(--pargh);
+}
+
+.inline-feature img {
+    width: 14%;
+}
+
+#theme-changer {
+    width: 4vw;
+    height: 4vw;
+    background: var(--light-main-bg);
+    border: none;
+    border-radius: 50%;
+}
+
+#theme-changer img {
+    width: 100%;
+}
+
+#nft-img-section{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    margin-top: var(--pargh);
+}
+
+#nft-img-section::after{
+    content: '';
+    display: block;
+    width: 19vw;
+    height: 19vw;
+    background: 
+        url("./images/icon-view.svg"),
+        linear-gradient(var(--trans-cyan), var(--trans-cyan))
+        ;
+    background-repeat: no-repeat;
+    background-position: 8vw 8vw, 0 0;
+    background-size: 3vw, auto;
+    z-index: 11;
+    position: absolute;
+    margin-left: 0vw;
+    opacity: 0;
+    border-radius: inherit;
+    transition: .3s opacity ease;
+    cursor: pointer;
+}
+
+#nft-img-section:hover::after{
+    opacity: 1;
+}
+
+#nft-preview{
+    object-fit: cover;
+    width: 100%;
+    transition: .3s width ease;
+}
+
+#nft-desc-section h1{
+    font-size: var(--title);
+    transition: .3s color ease;
+    cursor: pointer;
+}
+
+#nft-desc-section h1:hover {
+    color: var(--cyan);
+}
+
+#nft-description{
+    font-size: var(--pargh);
+    font-weight: 300;
+    color: var(--soft-blue)
+}
+
+#nft-feature {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#etherium p {
+    color: var(--cyan);
+}
+
+#time-left p {
+    color: var(--soft-blue);
+}
+
+#nft-creator-section{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: var(--pargh);
+}
+
+#creator-avatar {
+    width: 2vw;
+    height: 2vw;
+    border: solid 1px;
+    border-radius: 50%;
+}
+
+#creator-avatar img {
+    width: 100%;
+    object-fit: cover;
+}
+
+#span-creation {
+    color: var(--soft-blue);
+    margin-left: var(--pargh);
+}
+
+#creator-name { cursor: pointer; transition: .3s color ease; }
+#creator-name:hover{ color: var(--cyan); }
+
+@media screen and (max-width:500px){
+    .card{
+        width: 80vw;
+    }
+
+    :root{ --multiplier: 4; }
+
+    :root{
+        --title: calc(var(--title-point) * var(--multiplier) );
+        --pargh: calc(var(--pargh-point) * var(--multiplier) );
+    }
+    #creator-avatar{ width: 7vw; height: 7vw; }
+
+}
