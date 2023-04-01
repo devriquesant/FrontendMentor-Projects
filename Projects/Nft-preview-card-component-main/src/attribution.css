@@ -2,7 +2,7 @@
     --border-split: solid 1px;
 }
 
-a li{
+a {
     color: var(--soft-blue);
 }
 
