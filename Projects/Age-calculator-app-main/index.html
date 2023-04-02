@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./src/style.css">
+  <link rel="stylesheet" href="./src/attribution.css">
+  <title>Frontend Mentor | Age calculator app</title>
+
+</head>
+<body>
+
+  <main>
+    <form id="content-container">
+      <section id="insert-field">
+        <h1 class="sr-only">Insert birth values</h1>
+        <label for="day">
+          <p id="label-day">DAY</p>
+          <input placeholder="DD" type="text" id="day" class="input-value"/>
+          <p id="day-error" class="error-text"></p>
+        </label>
+
+        <label for="month">
+          <p id="label-month">MONTH</p>
+          <input placeholder="MM" type="text" id="month" class="input-value"/>
+          <p id="month-error" class="error-text"></p>
+        </label>
+
+        <label for="year">
+          <p id="label-year">YEAR</p>
+          <input placeholder="YYYY" type="text" id="year" class="input-value"/>
+          <p id="year-error" class="error-text"></p>
+        </label>
+      </section>
+
+      <section id="middle-section">
+        <hr>
+        <button  type="submit" id="submit" onclick="calculate()">
+          <img src="./src/assets/images/icon-arrow.svg" alt="Submit arrow" />
+        </button>
+      </section>
+
+      <section id="result-field">
+        <h1><span id="y-value">--</span> years</h1>
+        <h1><span id="m-value">--</span> months</h1>
+        <h1><span id="d-value">--</span> days</h1>
+      </section>
+    </form>
+  </main>
+
+  <footer>
+    <nav class="attribution">
+      <ul type="none" id="nav-items">
+        <li id="user">
+          <a href="https://devriquesant.github.io/FrontendMentor-Projects/">@devriquesant</a>
+        </li>
+        <li id="source">
+          <a href="https://github.com/devriquesant/FrontendMentor-Projects/tree/main/Projects/Nft-preview-card-component-main">Source</a>
+        </li>
+      </ul>
+    </nav>
+  </footer>
+  
+  <script src="./script.js"></script>
+</body>
+</html>
