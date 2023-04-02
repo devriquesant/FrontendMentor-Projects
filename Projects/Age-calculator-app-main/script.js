@@ -54,7 +54,9 @@ function initCalc( birth ){
     for ( var k in diff ){
         const K = k;
         txt_increase[k] = GET(`#${k}-value`);
-        txt_increase[k].goesTo = diff[k]
+        txt_increase[k].goesTo = diff[k];
+        
+        txt_increase[k].textContent = "--";
 
         txt_increase[k].timer = setInterval( function (){
             txt_increase[K].textContent = 
