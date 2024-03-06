@@ -13,7 +13,7 @@ This is a solution to the [3-column preview card component challenge on Frontend
 
 ## Captura de tela
 
-![](./React-Build/definitions/design/page_preview.png)
+![](./screenshot.png)
 
 
 ## Links
