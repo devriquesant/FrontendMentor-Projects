@@ -19,7 +19,7 @@ This is a solution to the [3-column preview card component challenge on Frontend
 ## Links
 
 - Solution / Solução: [Github](https://github.com/devriquesant/3-column-preview-card-component-main/)
-- Site: [Site](https://devriquesant.github.io/3-column-preview-card-component-main/)
+- Site: [Site](https://devriquesant.github.io/FrontendMentor-Projects/Projects/Column-preview-card-component-main/)
 
 # <img src="https://cdn-icons-png.flaticon.com/512/9906/9906449.png" width="30px"/> Português
 
