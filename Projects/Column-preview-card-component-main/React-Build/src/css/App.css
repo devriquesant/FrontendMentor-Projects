@@ -1,0 +1,173 @@
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("../fonts/Lexend_Deca/LexendDeca-VariableFont_wght.ttf");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Big Shoulders Display";
+  src: url("../fonts/Big_Shoulders_Display/BigShouldersDisplay-VariableFont_wght.ttf");
+  font-weight: 700;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(0, 0%, 95%);
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: 10%;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: stretch;
+  width: 80%;
+  max-width: 900px;
+  min-width: 700px;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.card-component {
+  width: 33.3333333333%;
+}
+.card-component#card-sedans {
+  background-color: hsl(31, 77%, 52%);
+}
+.card-component#card-suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+.card-component#card-luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.card-component-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 60px 40px;
+  height: 75%;
+}
+
+.card-text-section {
+  height: 100%;
+}
+.card-text-section .text-title {
+  color: hsl(0, 0%, 100%);
+  font-family: "Big Shoulders Display";
+  font-size: 40px;
+}
+.card-text-section .text-paragraph {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Lexend Deca";
+  font-size: 15px;
+}
+
+.card-button {
+  border: none;
+  background: none;
+  padding: 14px 30px;
+  border-radius: 100px;
+  background-color: hsl(0, 0%, 100%);
+  border: solid 1px;
+  cursor: pointer;
+  transition: 0.3s ease-out color, 0.3s ease-out background;
+}
+.card-button#button-sedans {
+  color: hsl(31, 77%, 52%);
+}
+.card-button#button-sedans:hover {
+  background-color: transparent;
+  color: hsl(0, 0%, 100%);
+}
+.card-button#button-suvs {
+  color: hsl(184, 100%, 22%);
+}
+.card-button#button-suvs:hover {
+  background-color: transparent;
+  color: hsl(0, 0%, 100%);
+}
+.card-button#button-luxury {
+  color: hsl(179, 100%, 13%);
+}
+.card-button#button-luxury:hover {
+  background-color: transparent;
+  color: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 700px) {
+  #root {
+    height: auto;
+  }
+  main {
+    align-items: flex-start;
+    padding: 20px 0;
+  }
+  #content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    min-width: auto;
+    max-width: none;
+  }
+  .card-component {
+    width: 100%;
+  }
+}
+.attribution {
+  font-family: "Lexend Deca";
+  text-align: center;
+}
+
+a {
+  color: hsl(179, 100%, 13%);
+}
+
+#nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+#nav-items li {
+  margin: 0 5px;
+  padding: 0 10px;
+}
+#nav-items #user {
+  border-right: solid 1px hsl(184, 100%, 22%);
+}
+#nav-items #source {
+  border-left: solid 1px hsl(184, 100%, 22%);
+}
