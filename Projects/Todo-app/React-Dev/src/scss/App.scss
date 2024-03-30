@@ -1,0 +1,342 @@
+@use './assets.scss' as *;
+
+body {
+  background-color: hslc(var(--c1));
+  margin: 0;
+  @include default-transition();
+}
+
+header {
+  position: absolute;
+  width: 100vw;
+  height: 30%;
+  overflow: hidden;
+  
+  img {
+    // width: 100%;
+    position: absolute;
+    object-fit: cover;
+    @include transition-pile(opacity);
+  }
+}
+
+main {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 550px;
+  height: 80%;
+  @include box( column, normal, normal, center, center );
+}
+
+.app-content {
+  width: 100%;
+  height: 800px;
+  @include box( column, normal, normal, normal, normal );
+}
+
+.header {
+  font-size: 35px;
+  width: 100%;
+  letter-spacing: 10px;
+  color: #fff;
+  
+  @include box( row, normal, normal, space-between, center );
+
+  h1 { margin: 0; }
+  margin-bottom: 30px;
+}
+
+.theme-switcher{
+  @include box( normal, normal, normal, space-between, center );
+}
+
+$form-size: 65px;
+
+.shadowing {
+  box-shadow: 0 0 20px #0006;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  background-color: hslc(var(--c2));
+
+  @include default-transition();
+}
+
+.container-wrapper {
+  min-width: $form-size;
+  aspect-ratio: 1 / 1;
+
+  @include box( normal, normal, normal, center, center );
+}
+
+.todo-form {
+  min-height: $form-size;
+  height: $form-size;
+
+  @include box( row, normal, normal, space-between, center );
+
+  .todo-input {
+    width: 100%;
+    height: 80%;
+
+    border: none;
+    background: none;
+    outline: none;
+    color: hslc(var(--c3));
+    font-size: 18px;
+    
+    margin-top: 0;
+    opacity: 1;
+
+    @include transition-pile( margin, opacity );
+    &.leave{
+      margin-top: 15%;
+      opacity: 0;
+    }
+
+    &.enter{
+      margin-top: -15%;
+      opacity: 0;
+    }
+  }
+}
+
+$range: 20px;
+@keyframes send-plane {
+  0%{ 
+    transform: translate(0px,0px)  rotate3d(0, 1, 0, 0deg);
+  }
+  25%{
+    transform: translate($range, 0px) rotate3d(0, 1, 0, 90deg);
+  }
+  50%{
+    transform: translate(0px, 0px) rotate3d(0, 1, 0, 180deg);
+    width: 10px;
+  }
+  75%{
+    transform: translate(-$range,0px)  rotate3d(0, 1, 0, 270deg);
+  }
+  100%{
+    transform: translate(0px,0px)  rotate3d(0, 1, 0, 360deg);
+    width: 20px;
+  }
+}
+
+.send-btn {
+  width: 50%;
+  height: 50%;
+  opacity: .2;
+  pointer-events: none;
+
+  @include transition-pile(opacity);
+  
+  &.enabled {
+    opacity: .6;
+    pointer-events: all;
+    
+    &:hover .send-img{
+      animation: send-plane 700ms linear forwards 1;
+    }
+  }
+}
+
+.send-img {
+  width: 20px;
+  opacity: 1;  
+  @include transition-pile(filter);
+  
+  &.dark { filter: brightness(1); }
+  &.light { filter: brightness(0); }
+}
+
+.todo-list {
+  height: 60vh;
+  margin-top: 30px;
+  user-select: none;
+
+  @include box( column, normal, normal, normal, normal );
+}
+
+.todos {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: hslc(var(--c3));
+  overflow: hidden auto;
+  
+  &.no-items {
+    @include box( column, normal, normal, center, center );
+    
+    &::before { content: 'No items yet...'; }
+  }
+  
+  label {
+    width: 100%;
+    height: 100%;
+    @include box( normal, normal, normal, normal, center );
+  }
+}
+
+@keyframes delete-item {
+  0%{ margin-left: 0; }
+  100%{ margin-left: 100%; }
+}
+
+
+.close-btn { 
+  opacity: 0;
+  @include transition-pile(opacity);
+}
+
+.todo-item { 
+  @include box( row, normal, normal, space-between, center );
+  @include cover-default-transition( margin, border );
+  position: relative;
+  background-color: hslc(var(--c2));
+  border-bottom: 1px solid hslc(var(--c5));
+
+  label {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    pointer-events: none;
+    height: 60px;
+    
+    @include box( normal, normal, normal, normal, center );
+    @include transition-pile(color);
+
+    &.completed {
+      color: hslc(var(--c4));
+    }
+  }
+
+  &.delete-item{
+    animation: delete-item $DTDuration $DTTiming 1 forwards;
+  }
+
+  &:hover {
+    background-color: #0002;
+
+    .close-btn { opacity: 1; }
+  }
+}
+
+.stroke {
+  position: absolute;
+  background-color: hslc(var(--c3));
+  width: 0%;
+  height: 1px;
+  margin-left: 17%;
+
+  @include transition-pile(width, background);
+  
+  &.completed { width: 70%; background-color: hslc(var(--c4)); }
+}
+
+.settings {
+  @include box( row, normal, normal, space-around, center );
+  font-size: 14px;
+  
+  > * { color: hslc(var(--c6)); }
+}
+
+.filters {
+  list-style: none;
+  padding: 0;
+  @include box( row, normal, normal, normal, normal )
+}
+
+.clear-btn:hover { color: hslc(var(--c3)); }
+
+.current-theme {
+  position:absolute;
+  margin-left: -15px;
+
+  @include transition-pile(margin);
+  transition-timing-function: cubic-bezier(0.58, 0.17, 0.68, 1.39);
+  
+  &.open { margin-left: -40px; }
+}
+
+.theme-container {
+  @include box(row, normal, normal, center, center);
+}
+
+.other-themes {
+  opacity: 0;
+  pointer-events: none;
+  border-left: dotted 0px transparent;
+
+  @include transition-pile(opacity, border);
+  img {
+    width: 0;
+    @include transition-pile(width);
+  }
+  
+  &.open{
+    opacity: .6;
+    pointer-events: all;
+    border-left: dotted 3px hslc(var(--c8));
+    
+    img { width: 22px; }
+  }
+}
+
+.grabber {
+  min-width: 30px;
+  height: 100%;
+  
+  img { pointer-events: none; }
+  cursor: grab;
+  @include box( row, normal, normal, flex-end, center );
+}
+
+.dragging-item {
+  border-radius: 7px;
+  background-color: #0002;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    width: 80%;
+  }
+
+  .filters {
+    position: absolute;
+    margin-top: 130px;
+    background-color: hslc(var(--c2));
+    border-radius: 5px;
+    width: 80%;
+    padding: 15px 0;
+    box-shadow: 0px 0px 20px #0006;
+
+    @include box( row, normal, normal, center, center );
+  }
+
+  .todo-list {
+    height: 50vh;
+  }
+
+  span.info-text {
+    margin-top: 100px;
+  }
+
+  .header {
+    font-size: 20px;
+  }
+}
+
+.info-text {
+  color: hsl(var(--c6));
+  font-size: 15px;
+  margin-top: 40px;
+}
